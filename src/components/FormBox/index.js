@@ -4,16 +4,7 @@ import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import "./FormBox.css";
 
-const FormBox = () => {
-  const times = [
-    "Programing",
-    "Front",
-    "Data",
-    "Devops",
-    "UX",
-    "Mobile",
-    "Inovation",
-  ];
+const FormBox = (props) => {
 
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
@@ -22,7 +13,12 @@ const FormBox = () => {
 
   const aoSalvar = (event) => {
     event.preventDefault();
-    console.log("Form enviado", nome, cargo, imagem, time);
+    props.aoColaboradorCadastrado({
+      nome: nome,
+      cargo: cargo,
+      imagem: imagem,
+      time: time
+    });
   }
 
   return (
@@ -52,7 +48,7 @@ const FormBox = () => {
         <ListaSuspensa
           required={true}
           label="Tista"
-          itens={times}
+          itens={props.times}
           valor={time}
           aoAlterado={valor => setTime(valor)}
         />
