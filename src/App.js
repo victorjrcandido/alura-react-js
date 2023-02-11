@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Banner from "./components/Banner";
-import Colaborador from "./components/Colaborador";
 import FormBox from "./components/FormBox";
 import Time from "./components/Time";
 
@@ -46,7 +45,6 @@ function App() {
 
   const [colaboradores, setColaboradores] = useState([]);
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   }
 
@@ -59,7 +57,7 @@ function App() {
         nome={time.nome}
         corPrimaria={time.corPrimaria}
         corSecundaria={time.corSecundaria}
-        colaboradores={colaboradores}
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
     </div>
   );

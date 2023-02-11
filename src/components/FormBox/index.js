@@ -14,12 +14,16 @@ const FormBox = (props) => {
   const aoSalvar = (event) => {
     event.preventDefault();
     props.aoColaboradorCadastrado({
-      nome: nome,
-      cargo: cargo,
-      imagem: imagem,
-      time: time
+      nome,
+      cargo,
+      imagem,
+      time
     });
-  }
+    setCargo('');
+    setNome('');
+    setImagem('');
+    setTime('');
+  };
 
   return (
     <section className="form">
@@ -27,7 +31,7 @@ const FormBox = (props) => {
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <Form
           required={true} l
-          abel="Nome"
+          label="Nome"
           placeholder="Digite seu nome"
           valor={nome}
           aoAlterado={valor => setNome(valor)}
@@ -36,7 +40,7 @@ const FormBox = (props) => {
           required={true}
           label="Cargo"
           placeholder="Digite seu cargo"
-          value={cargo}
+          valor={cargo}
           aoAlterado={valor => setCargo(valor)}
         />
         <Form
@@ -47,7 +51,7 @@ const FormBox = (props) => {
         />
         <ListaSuspensa
           required={true}
-          label="Tista"
+          label="Time"
           itens={props.times}
           valor={time}
           aoAlterado={valor => setTime(valor)}
