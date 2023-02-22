@@ -7,39 +7,29 @@ function App() {
 
   const times = [
     {
-      nome: "Programing",
+      nome: "Top",
+      corPrimaria: "#ffa94d",
+      corSecundaria: "#fff4e6"
+    },
+    {
+      nome: "Jungle",
       corPrimaria: "#57C278",
       corSecundaria: "#D9F7E9"
     },
     {
-      nome: "Front",
+      nome: "Mid",
       corPrimaria: "#82CFFA",
       corSecundaria: "#E8F8FF"
     },
     {
-      nome: "Data",
-      corPrimaria: "#A6D157",
-      corSecundaria: "#F0F8E2"
-    },
-    {
-      nome: "Devops",
+      nome: "Adc",
       corPrimaria: "#E06B69",
       corSecundaria: "#FDE7E8"
     },
     {
-      nome: "UX",
+      nome: "Suporte",
       corPrimaria: "#DB6EBF",
       corSecundaria: "#FAE9F5"
-    },
-    {
-      nome: "Mobile",
-      corPrimaria: "#FFBA05",
-      corSecundaria: "#FFF5D9"
-    },
-    {
-      nome: "Inovation",
-      corPrimaria: "#FF8A29",
-      corSecundaria: "#FFEEDF"
     },
   ]
 

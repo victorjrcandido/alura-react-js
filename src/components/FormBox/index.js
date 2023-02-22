@@ -28,18 +28,18 @@ const FormBox = (props) => {
   return (
     <section className="form">
       <form onSubmit={aoSalvar}>
-        <h2>Preencha os dados para criar o card do colaborador</h2>
+        <h2>Monte seu time de League of Legends</h2>
         <Form
           required={true} l
-          label="Nome"
-          placeholder="Digite seu nome"
+          label="Campeão"
+          placeholder="Digite o nome do campeão"
           valor={nome}
           aoAlterado={valor => setNome(valor)}
         />
         <Form
           required={true}
-          label="Cargo"
-          placeholder="Digite seu cargo"
+          label="Dano"
+          placeholder="Digite o tipo de dano"
           valor={cargo}
           aoAlterado={valor => setCargo(valor)}
         />
@@ -51,7 +51,7 @@ const FormBox = (props) => {
         />
         <ListaSuspensa
           required={true}
-          label="Time"
+          label="Lane"
           itens={props.times}
           valor={time}
           aoAlterado={valor => setTime(valor)}
