@@ -1,7 +1,7 @@
 import './Colaborador.css';
 import React from 'react';
 
-const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => {
+const Colaborador = ({ nome, imagem, lane, corDeFundo }) => {
   return (
     <div className='colaborador'>
       <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
@@ -9,7 +9,7 @@ const Colaborador = ({ nome, imagem, cargo, corDeFundo }) => {
       </div>
       <div className='rodape'>
         <h4>{nome}</h4>
-        <h5>{cargo}</h5>
+        <h5>{lane}</h5>
       </div>
     </div>
   )
